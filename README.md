@@ -16,3 +16,13 @@ django-admin startproject ct
 python manage.py startapp uo
 python manage.py runserver 0.0.0.0:8080&
 ```
+
+## Question 2 
+
+Nous avons choisi d'implémenter une template de base dont les autres templates hériteront. La template de base sera complétée à la question 14.
+
+Commandes utilisées : 
+
+```bash
+python manage.py runserver 0.0.0.0:8080&
+```
