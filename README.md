@@ -14,4 +14,5 @@ Commandes utilisées :
 ```bash
 django-admin startproject ct
 python manage.py startapp uo
+python manage.py runserver 0.0.0.0:8080&
 ```

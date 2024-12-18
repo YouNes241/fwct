@@ -1,0 +1,8 @@
+.DS_Store
+
+__pycache__
+local_settings.py
+db.sqlite3
+
+uo/migrations/*
+!uo/migrations/__init__.py
