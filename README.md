@@ -7,3 +7,11 @@ Groupe :
 * Nicolas Paul <nicolas.paul1@etu.univ-orleans.fr>
 * Younes Ouaammou <younes.ouaammou@etu.univ-orleans.fr>
 
+## Question 1
+
+Commandes utilisées :
+
+```bash
+django-admin startproject ct
+python manage.py startapp uo
+```
