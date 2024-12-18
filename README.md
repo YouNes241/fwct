@@ -26,3 +26,14 @@ Commandes utilisées :
 ```bash
 python manage.py runserver 0.0.0.0:8080&
 ```
+
+## Question 3
+L'application d'administration Django est déjà disponible à la création du projet.
+
+Commandes utilisées :
+```bash
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver 0.0.0.0:8080&
+```
+
