@@ -37,3 +37,13 @@ python manage.py createsuperuser
 python manage.py runserver 0.0.0.0:8080&
 ```
 
+
+## Question 4
+
+Commandes utilisées :
+```bash
+python manage.py dumpdata > uo/fixtures/enseignant.json
+python manage.py loaddata uo/fixtures/enseignant.json
+python manage.py runserver 0.0.0.0:8080&
+```
+
