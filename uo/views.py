@@ -54,8 +54,8 @@ def ajout_ue(requete) :
 @login_required
 def modif_ue(requete, m):
     ue = get_object_or_404(UE, id = m)
+    resps = list(ue.responsables.all())
     formations = ue.formations.all()
-    resps = []
     for f in formations :
         resps.append(f.responsable)
     if requete.user not in resps : 

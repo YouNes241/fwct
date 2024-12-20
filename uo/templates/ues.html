@@ -16,6 +16,8 @@
 			{%if ue.id in permis%}
 			<a class="btn btn-primary" href="{% url 'modif_ue' ue.id %}">Modifier</a>
 			<a class="btn btn-danger" href="{% url 'suppr_ue' ue.id %}">Supprimer</a>
+			{%elif user in ue.responsables.all%}
+			<a class="btn btn-primary" href="{% url 'modif_ue' ue.id %}">Modifier</a>
 			{%endif%}
 		</td>
 	</tr>
