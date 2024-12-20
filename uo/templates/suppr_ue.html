@@ -4,12 +4,10 @@
 
 {% block contenu %}
 <h1 class="display-1">Supprimer {{ ue.titre }} ?</h1>
-<p>{{ ue.description }}
+<p>{{ ue.description }}</p>
 
 <form method="post" class="form">
 	{% csrf_token %}
-	<button type="submit"
-	        name="delete"
-	        class="btn btn-danger">Supprimer</button>
+	<button type="submit" name="delete" class="btn btn-danger">Supprimer</button>
 </form>
 {% endblock %}

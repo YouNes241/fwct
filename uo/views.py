@@ -36,6 +36,7 @@ def check_save(form, requete):
         val.save()
     return val.id
 
+@login_required
 def ajout_ue(requete) :
     if requete.method == "POST" :
         form = Ue_form(requete.POST)
@@ -47,6 +48,7 @@ def ajout_ue(requete) :
         form = Ue_form()
     return render(requete,'ue_form.html',{"page_service":"Ajouter UE",'form': form , "button":"Ajouter"})
 
+@login_required
 def modif_ue(requete, m):
     ue = get_object_or_404(UE, id = m)
     if requete.method == "POST":
@@ -58,6 +60,7 @@ def modif_ue(requete, m):
         form = Ue_form(instance = ue)
     return render(requete, 'ue_form.html', {"page_service":"Modifier UE", "form": form, "button":"Modifier"})
 
+@login_required
 def supprimer_ue(requete, m):
     ue = get_object_or_404(UE, pk = m)
     if requete.method == "POST":
