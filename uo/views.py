@@ -19,16 +19,19 @@ def formations(requete):
 def formation(requete, n):
     c = get_object_or_404(Formation, id=n)
     ue = UE.objects.filter(formations = c)
-    return render(requete, 'formation.html', {'formation': c, 'ue': ue})
+    permis = verif_ue_resp_formation(requete.user)
+    return render(requete, 'formation.html', {'formation': c, 'ue': ue,'permis':permis})
 
 def ue(requete, m):
     ue = get_object_or_404(UE, id=m)
     formations = Formation.objects.filter(ue__id = ue.id)
-    return render(requete, 'ue.html', {'ue': ue, 'formations': formations})
+    permis = verif_ue_resp_formation(requete.user)
+    return render(requete, 'ue.html', {'ue': ue, 'formations': formations , 'permis':permis})
 
 def ues(requete):
     ues = UE.objects.order_by('-titre')
-    return render(requete, 'ues.html', {'ues': ues})
+    permis = verif_ue_resp_formation(requete.user)
+    return render(requete, 'ues.html', {'ues': ues , 'permis':permis})
 
 def check_save(form, requete):
     if form.is_valid():
@@ -51,6 +54,13 @@ def ajout_ue(requete) :
 @login_required
 def modif_ue(requete, m):
     ue = get_object_or_404(UE, id = m)
+    formations = ue.formations.all()
+    resps = []
+    for f in formations :
+        resps.append(f.responsable)
+    if requete.user not in resps : 
+        return redirect("home")
+
     if requete.method == "POST":
         form = Ue_form(requete.POST, instance = ue)
         if form.is_valid():
@@ -63,10 +73,32 @@ def modif_ue(requete, m):
 @login_required
 def supprimer_ue(requete, m):
     ue = get_object_or_404(UE, pk = m)
+    formations = ue.formations.all()
+    resps = []
+    for f in formations :
+        resps.append(f.responsable)
+    if requete.user not in resps : 
+        return redirect("home")
+
     if requete.method == "POST":
         ue.delete()
         return redirect("ues")
     return render(requete, "suppr_ue.html", {"ue":ue})
+
+
+def verif_ue_resp_formation(user):
+    permis = []
+    ues = UE.objects.order_by('-titre')
+    for ue in ues :
+        formations = ue.formations.all()
+        resps = []
+        for f in formations :
+            resps.append(f.responsable)
+        if user in resps :
+            permis.append(ue.id)
+    return permis 
+
+
 
 def login(requete):
     return render(requete, "login.html")
