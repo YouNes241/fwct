@@ -1,0 +1,38 @@
+[
+    {
+        "model": "uo.formation",
+        "pk": 1,
+        "fields": {
+            "intitule": "Licence Informatique - Parcours Ingénierie informatique",
+            "description": "La Licence informatique a pour objectif de transmettre une culture générale de haut niveau en informatique. Il est ainsi possible d’envisager une insertion immédiate dans le milieu professionnel dans tous les domaines de l’informatique.",
+            "responsable": 3
+        }
+    },
+    {
+        "model": "uo.formation",
+        "pk": 2,
+        "fields": {
+            "intitule": "Licence Informatique - Parcours MIAGE",
+            "description": "Méthodes Informatiques Appliquées à la Gestion des Entreprises (MIAGE)",
+            "responsable": 2
+        }
+    },
+    {
+        "model": "uo.formation",
+        "pk": 3,
+        "fields": {
+            "intitule": "Master Informatique",
+            "description": "Le Master Informatique (Informatique Mobile Intelligente et Sécurisée) apporte un socle solide de connaissances et de compétences en informatique. Ces connaissances s'articulent autour de savoirs fondamentaux, d'architectures logicielles actuelles, de l'informatique mobile, des systèmes cross-plateformes, du big data et de l'intelligence artificielle. Le diplôme est co-habilité avec l'INSA Centre Val de Loire.",
+            "responsable": 4
+        }
+    },
+    {
+        "model": "uo.formation",
+        "pk": 4,
+        "fields": {
+            "intitule": "Master MIAGE",
+            "description": "La formation MIAGE s’étend sur une durée de 3 ans, de la 3ème année de Licence (mention Informatique, parcours MIAGE) au Master (mention MIAGE).\r\n\r\nSon objectif est de former des cadres en Informatique, spécialistes des systèmes d’information, maîtrisant les méthodes d’ingénierie et leurs applications en entreprise. Cette formation apporte également des compétences complémentaires en gestion, management et communication (en français et en anglais).\r\n\r\nCe parcours de formation fortement professionnalisé (multiples projets, 10 mois de stage en entreprise,  30% d’intervenants professionnels, …) est conforme au programme national  MIAGE déployé en France dans un réseau de 20 universités.\r\n\r\nUn conseil de perfectionnement, intégrant des représentants du monde de l’entreprise, veille à l’harmonisation des parcours de spécialités, aux orientations d’enseignement, notamment en terme d’évolution des métiers.\r\n\r\nLa formation MIAGE est accessible en formation initiale, en formation continue, ainsi qu’en alternance en Master (contrat d'apprentissage ou contrat de professionnalisation).",
+            "responsable": 5
+        }
+    }
+]

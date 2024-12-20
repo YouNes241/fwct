@@ -1,0 +1,225 @@
+[
+    {
+        "model": "uo.ue",
+        "pk": 1,
+        "fields": {
+            "titre": "Framework Web 1",
+            "description": "Ce module vise à introduire les étudiants à la conception de sites web dynamiques à l’aide de frameworks modernes, en se concentrant sur Django, un framework Python populaire pour le développement web, et Dream, un framework plus léger. Les étudiants apprendront à créer des applications web, à manipuler des bases de données, et à implémenter des fonctionnalités web avancées tout en suivant les bonnes pratiques de développement.",
+            "horaires_cm": 10,
+            "horaires_td": 0,
+            "horaires_tp": 20,
+            "ects": 4,
+            "formations": [
+                1,
+                2
+            ],
+            "responsables": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "uo.ue",
+        "pk": 2,
+        "fields": {
+            "titre": "Réseaux",
+            "description": "Initiation aux réseaux informatiques.",
+            "horaires_cm": 15,
+            "horaires_td": 8,
+            "horaires_tp": 6,
+            "ects": 4,
+            "formations": [
+                1,
+                2
+            ],
+            "responsables": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "uo.ue",
+        "pk": 3,
+        "fields": {
+            "titre": "Analyse et conception d'algorithmes",
+            "description": "Ce module vise à fournir aux étudiants les compétences nécessaires pour concevoir, analyser et évaluer des algorithmes efficaces. Les étudiants apprendront à appliquer des techniques avancées pour résoudre des problèmes complexes, tout en tenant compte des contraintes en termes de temps d'exécution et de mémoire.",
+            "horaires_cm": 16,
+            "horaires_td": 20,
+            "horaires_tp": 6,
+            "ects": 4,
+            "formations": [
+                1
+            ],
+            "responsables": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "uo.ue",
+        "pk": 4,
+        "fields": {
+            "titre": "Cloud computing",
+            "description": "Ce module a pour objectif de familiariser les étudiants avec les concepts fondamentaux, les architectures, et les technologies utilisées dans le domaine du Cloud Computing. Les étudiants apprendront à concevoir, déployer et gérer des solutions informatiques basées sur le cloud en tenant compte des aspects de performance, de scalabilité, de sécurité et de coûts.",
+            "horaires_cm": 26,
+            "horaires_td": 30,
+            "horaires_tp": 25,
+            "ects": 5,
+            "formations": [
+                3
+            ],
+            "responsables": [
+                7
+            ]
+        }
+    },
+    {
+        "model": "uo.ue",
+        "pk": 5,
+        "fields": {
+            "titre": "Gestion Comptable",
+            "description": "Ce module vise à initier les étudiants aux concepts fondamentaux de la comptabilité, ainsi qu'à leur application dans la gestion des finances d’une organisation. Les étudiants apprendront à établir et analyser les documents comptables, comprendre les principes de base de la fiscalité et maîtriser les outils informatiques utilisés en comptabilité.",
+            "horaires_cm": 10,
+            "horaires_td": 20,
+            "horaires_tp": 0,
+            "ects": 3,
+            "formations": [
+                2
+            ],
+            "responsables": [
+                7
+            ]
+        }
+    },
+    {
+        "model": "uo.ue",
+        "pk": 6,
+        "fields": {
+            "titre": "Statistiques",
+            "description": "Ce module a pour but d’initier les étudiants aux concepts fondamentaux de la statistique et à leur application dans l’analyse et la prise de décision. Les étudiants apprendront à collecter, organiser, interpréter, et modéliser des données à l'aide de méthodes statistiques, tout en utilisant des outils informatiques adaptés.",
+            "horaires_cm": 15,
+            "horaires_td": 25,
+            "horaires_tp": 0,
+            "ects": 4,
+            "formations": [
+                2
+            ],
+            "responsables": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "uo.ue",
+        "pk": 7,
+        "fields": {
+            "titre": "Programmation impérative et orientée objet",
+            "description": "Ce module vise à développer les compétences des étudiants dans la programmation impérative et orientée objet en utilisant les langages C et C++. Les étudiants apprendront à concevoir, implémenter et déboguer des programmes en appliquant les concepts fondamentaux des deux paradigmes.",
+            "horaires_cm": 10,
+            "horaires_td": 15,
+            "horaires_tp": 48,
+            "ects": 7,
+            "formations": [
+                1
+            ],
+            "responsables": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "uo.ue",
+        "pk": 8,
+        "fields": {
+            "titre": "Big Data",
+            "description": "Ce module a pour objectif de familiariser les étudiants avec les concepts, technologies et outils nécessaires pour manipuler, traiter et analyser de grandes volumétries de données (Big Data). Les étudiants apprendront à utiliser des plateformes modernes, à concevoir des pipelines de données efficaces et à appliquer des techniques d’analyse avancées pour extraire des informations exploitables.",
+            "horaires_cm": 18,
+            "horaires_td": 10,
+            "horaires_tp": 23,
+            "ects": 5,
+            "formations": [
+                3
+            ],
+            "responsables": [
+                7
+            ]
+        }
+    },
+    {
+        "model": "uo.ue",
+        "pk": 9,
+        "fields": {
+            "titre": "Cryptographie et sécurité",
+            "description": "Ce module vise à initier les étudiants aux concepts fondamentaux de la cryptographie et aux mécanismes de sécurité informatique. Ils apprendront à concevoir et analyser des systèmes sécurisés, à appliquer des techniques cryptographiques modernes, et à identifier les vulnérabilités pour protéger les données et les systèmes contre les cyberattaques.",
+            "horaires_cm": 15,
+            "horaires_td": 20,
+            "horaires_tp": 30,
+            "ects": 6,
+            "formations": [
+                3,
+                4
+            ],
+            "responsables": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "uo.ue",
+        "pk": 10,
+        "fields": {
+            "titre": "Data Mining",
+            "description": "Ce module vise à enseigner aux étudiants les techniques et méthodes de fouille de données (Data Mining) pour extraire des informations pertinentes à partir de grands ensembles de données. Les étudiants apprendront à appliquer des algorithmes de Data Mining à des problématiques concrètes, en utilisant des outils modernes et des techniques de visualisation adaptées.",
+            "horaires_cm": 12,
+            "horaires_td": 14,
+            "horaires_tp": 26,
+            "ects": 4,
+            "formations": [
+                3,
+                4
+            ],
+            "responsables": [
+                7
+            ]
+        }
+    },
+    {
+        "model": "uo.ue",
+        "pk": 11,
+        "fields": {
+            "titre": "Anglais",
+            "description": "Ce module vise à renforcer les compétences linguistiques des étudiants en anglais, à la fois à l’oral et à l’écrit, dans un contexte académique et professionnel. Il met l’accent sur la maîtrise du vocabulaire technique lié au domaine informatique et technologique, ainsi que sur l’amélioration de la communication interpersonnelle et professionnelle en anglais.",
+            "horaires_cm": 0,
+            "horaires_td": 15,
+            "horaires_tp": 0,
+            "ects": 3,
+            "formations": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "responsables": [
+                7
+            ]
+        }
+    },
+    {
+        "model": "uo.ue",
+        "pk": 12,
+        "fields": {
+            "titre": "Conception orientée objet",
+            "description": "Ce module a pour objectif d’enseigner les principes fondamentaux de la conception orientée objet (OO) et de permettre aux étudiants de développer des compétences dans la création de logiciels modulaires, évolutifs et réutilisables. L’accent est mis sur la maîtrise des concepts de base de l’OO, ainsi que sur l’application de ces concepts dans la modélisation et la conception de systèmes complexes.",
+            "horaires_cm": 12,
+            "horaires_td": 20,
+            "horaires_tp": 20,
+            "ects": 4,
+            "formations": [
+                1
+            ],
+            "responsables": [
+                4
+            ]
+        }
+    }
+]

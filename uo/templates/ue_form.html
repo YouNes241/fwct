@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block titre %}{{ ue.titre }}{% endblock %}
+
+{% block contenu %}
+<h1 class="display-1">{{ page_service }}</h1>
+
+<form action="" method="POST" class="form">
+	{% csrf_token %}
+	{% bootstrap_form form %}
+	<input type="submit"
+	       value="{{ button }}"
+	       class="btn btn-primary">
+</form>
+{% endblock %}

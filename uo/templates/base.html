@@ -1,16 +1,53 @@
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block titre %}Page principale{% endblock %}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block titre %}Formations{% endblock %}</title>
 </head>
 
-<body>
-    <main>
-        {% block contenu %}{% endblock %}
-    </main>
-</body>
+<body class="bg-dark">
+<header class="sticky-top fs-4">
+	<nav class="navbar navbar-expand-sm bg-primary mb-4">
+	<div class="container d-flex justify-content-center">
+		<ul class="navbar-nav gap-5">
+			<li class="nav-item">
+			<a class="nav-link link-light" href="{% url 'home' %}">Accueil</a>
+			</li>
 
+			<li class="nav-item">
+			<a class="nav-link link-light" href="{% url 'formations' %}">Liste des formations</a>
+			</li>
+
+			<li class="nav-item">
+			<a class="nav-link link-light" href="{% url 'ues' %}">Liste des UEs</a>
+			</li>
+
+			<li class="nav-item">
+			<a class="nav-link link-light" href="{% url 'ajouter_ue' %}">Nouvelle UE</a>
+			</li>
+
+			<li class="nav-item">
+			<a class="nav-link link-light" href="{% url 'a_propos' %}">A propos</a>
+			</li>
+		</ul>
+		{% if user.is_authenticated %}
+			<span class="navbar-text float-end p-2">{{ user.first_name }} {{ user.last_name }}</span>
+			<a href={% url "logout" %} class="btn btn-secondary float-end" role="button">Se déconnecter</a>
+			{% else %}
+			<a href={% url "login" %} class="btn btn-secondary float-end" role="button">Se connecter</a>
+        {% endif %}
+	</div>
+	</nav>
+</header>
+
+<main class="m-5 text-bg-dark fs-5 text-start">
+{% block contenu %}{% endblock %}
+</main>
+</body>
 </html>

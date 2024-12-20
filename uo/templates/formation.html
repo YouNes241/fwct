@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block titre %}Formation{% endblock %}
+
+{% block contenu %}
+<h1 class="display-1">{{ formation.intitule }}</h1>
+<p>Responsable : {{ formation.responsable.first_name }} {{ formation.responsable.last_name }}.
+   <br>
+   {{formation.description}}</p>
+
+<h2 class="display-2">UEs enseignées</h2>
+<table class="table table-dark">
+{% for k in ue %}
+	<tr>
+        	<td class="fs-5 text-bg-dark">{{ k.titre }}</td>
+        	<td class="btn-group">
+			<a class="btn btn-primary" href="{% url 'ue' k.id %}">Détails</a>
+			<a class="btn btn-primary" href="{% url 'modif_ue' k.id %}">Modifier</a>
+			<a class="btn btn-danger"  href="{% url 'suppr_ue' k.id %}">Supprimer</a>
+		</td>
+	</tr>
+{% endfor %}
+</table>
+{% endblock %}

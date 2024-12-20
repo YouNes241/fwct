@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titre %}Liste des formations{% endblock %}
+
+{% block contenu %}
+<h1 class="display-1">Liste des formations proposées</h1>
+
+<ul class="list-inline">
+{% for formation in formations %}
+	<li>
+	<a class="list-inline-item link-primary m-2"
+	   href="{% url 'formation' formation.id %}">{{ formation.intitule }}</a>
+	</li>
+{% endfor %}
+</ul>
+{% endblock %}

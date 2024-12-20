@@ -1,0 +1,45 @@
+{% extends "../base.html" %}
+
+{% block titre %}Page Login{% endblock %}
+{% block contenu %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Se connecter</h1>
+
+    {% if form.errors %}
+    <div class="alert alert-danger" role="alert">
+        Votre nom d'utilisateur ou mot de passe est incorrect. Veuillez réessayer.
+    </div>
+    {% endif %}
+
+    {% if next %}
+    {% if user.is_authenticated %}
+    <div class="alert alert-warning" role="alert">
+        Vous ne disposez pas des autorisations nécessaires pour accéder à cette page.
+    </div>
+    {% else %}
+    <div class="alert alert-info" role="alert">
+        Veuillez vous connecter pour accéder à cette page.
+    </div>
+    {% endif %}
+    {% endif %}
+
+    <form method="post" action="{% url 'login' %}" class="form bg-light p-4 rounded shadow">
+        {% csrf_token %}
+        <table class="table table-borderless">
+            <tr>
+                <td class="text-end">Nom d'utilisateur</td>
+                <td>{{ form.username }}</td>
+            </tr>
+            <tr>
+                <td class="text-end">Mot de passe</td>
+                <td>{{ form.password }}</td>
+            </tr>
+        </table>
+
+        <div class="text-center">
+            <input type="submit" value="Se connecter" class="btn btn-primary mt-4 shadow-sm">
+        </div>
+        <input type="hidden" name="next" value="/">
+    </form>
+</div>
+{% endblock %}

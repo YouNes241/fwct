@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block titre %} UE {% endblock %}
+
+{% block contenu %}
+<h1 class="display-1">{{ ue.titre }}</h1>
+<p>{{ ue.horaires_cm }}h de CM, {{ ue.horaires_td }}h de TD
+   et {{ ue.horaires_tp }}h de TP.
+   <br>
+   Vaut {{ ue.ects }} crédits ECTS.</p>
+
+<div class="mb-5">
+	<a class="btn btn-primary" href="{% url 'modif_ue' ue.id %}">Modifier</a>
+	<a class="btn btn-danger"  href="{% url 'suppr_ue' ue.id %}">Supprimer</a>
+</div>
+
+<table class="table table-dark">
+{% for f in formations %}
+	<tr>
+        	<td class="fs-5 text-bg-dark">{{ f.intitule }}</td>
+        	<td class="btn-group">
+			<a class="btn btn-primary" href="{% url 'formation' f.id %}">Détails</a>
+        	</td>
+	</tr>
+{% endfor %}
+</table>
+{% endblock %}

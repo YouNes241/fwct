@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import UE, Formation
 
-# Register your models here.
+
+admin.site.register(Formation)
+admin.site.register(UE)
